@@ -1,16 +1,14 @@
 let parola =  prompt('inserisci la parola')
-
 let parolaInversa = invertiParola(parola);
 
-const outputHtml = document.getElementById('results');
+function invertiParola(word){
+  var wordInversa = word.split('').reverse().join('');  
+  return wordInversa;
+}
 
 if(parola == parolaInversa){
-    console.log('la parola è palindroma')
+    document.write('la parola è palindroma');
   } else {
-    console.log('la parola non è palindroma');
+    document.write('la parola non è palindroma');
   }
   
-function invertiParola(str){
-  var strInversa = str.split('').reverse().join('');  
-  return strInversa;
-}
